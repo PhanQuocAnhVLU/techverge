@@ -135,3 +135,82 @@ ul, ol {
         padding: 0 var(--space-3);
     }
 }
+
+/* Wow Effects */
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0; left: 0;
+    width: 6px; height: 6px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate3d(-50%, -50%, 0);
+    transition: width 0.2s, height 0.2s;
+    mix-blend-mode: difference;
+}
+.custom-cursor-follower {
+    position: fixed;
+    top: 0; left: 0;
+    width: 36px; height: 36px;
+    border: 1.5px solid rgba(255, 42, 109, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate3d(-50%, -50%, 0);
+    transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+}
+.custom-cursor-follower.active {
+    width: 50px; height: 50px;
+    background-color: rgba(255, 42, 109, 0.1);
+    border-color: var(--color-accent);
+}
+@media (hover: none) and (pointer: coarse) {
+    .custom-cursor, .custom-cursor-follower { display: none !important; }
+}
+
+/* Scroll Reveal */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal-item.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced hover for cards */
+.article-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.article-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: var(--shadow-neon);
+}
+.article-card .card-img-wrapper {
+    overflow: hidden;
+}
+.article-card img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.article-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Ambient glow */
+.ambient-glow {
+    position: fixed;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at center, rgba(123, 97, 255, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: rotateGlow 25s linear infinite;
+}
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
