@@ -88,19 +88,9 @@ function renderArticle(id) {
         </figure>`}
 
         <div class="article-body">
-            <p>Trong kỷ nguyên công nghệ thay đổi từng ngày, thiết bị này mang đến một làn gió mới, định nghĩa lại những gì chúng ta có thể làm. Thiết kế không chỉ là vẻ bề ngoài, nó là cách mọi thứ hoạt động hài hòa với nhau.</p>
-            
-            <h2>Trải nghiệm thực tế</h2>
-            <p>Sau nhiều ngày sử dụng liên tục, chúng tôi nhận thấy có những sự khác biệt rõ rệt so với thế hệ trước. Hiệu năng được cải thiện đáng kể trong các tác vụ nặng. Giao diện mượt mà và trực quan hơn.</p>
-            
-            <blockquote>"Đây không chỉ là một bản nâng cấp phần cứng, nó là một sự tiến hóa về cách chúng ta tương tác với công nghệ hàng ngày."</blockquote>
-            
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" alt="Image in article">
+            ${article.content || `<p>${article.excerpt}</p>`}
             
             ${reviewHTML}
-            
-            <h3>Kết luận</h3>
-            <p>Dù vẫn còn một vài điểm cần cải thiện, nhưng nhìn chung đây là một sản phẩm rất đáng cân nhắc trong phân khúc. Đối với những người tìm kiếm sự đổi mới và sẵn sàng trải nghiệm, nó chắc chắn sẽ không làm bạn thất vọng.</p>
             
             <div style="display:flex; gap:0.5rem; margin-top:var(--space-6); padding-top:var(--space-4); border-top:1px solid var(--color-border);">
                 <span style="font-weight:600; margin-right:1rem;">Tags:</span>
