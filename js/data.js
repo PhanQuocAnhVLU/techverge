@@ -222,7 +222,7 @@ const articles = [
         title: 'Trải nghiệm iPhone 17 Pro Max: Apple cuối cùng cũng thay đổi thiết kế?',
         excerpt: 'Video đánh giá chi tiết thiết kế mới, camera và thời lượng pin siêu khủng của chiếc iPhone được mong chờ nhất năm.',
         category: 'reviews',
-        imageUrl: 'https://images.unsplash.com/photo-1603898037225-84ee4fa41e73?q=80&w=800&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?q=80&w=800&auto=format&fit=crop',
         author: 'Minh Hoàng',
         date: '2026-05-30',
         readTime: '10 min read',
